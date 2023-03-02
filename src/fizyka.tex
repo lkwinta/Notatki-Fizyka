@@ -138,18 +138,22 @@
         Korzystając z analizy matematycznej aby dokładnie opisać prędkość chwilową ciała należy dążyć ze zmianą czasu do 0. ($\Delta x\rightarrow 0$), a więc
 
         \[v = \lim_{\Delta t \rightarrow 0}{\frac{\Delta x}{\Delta t}} = \frac{dx}{dt}\]
-
-        A więc prędkość jest pierwszą pochodną położenia (drogi) po czasie.
+        A więc prędkość jest pierwszą pochodną położenia (drogi) po czasie.\\
+        Warto tutaj zwrówicić uwagę, że prawdziwa też jest operacja odwrotna:
+        \[v = \frac{dx}{dt}  \quad  \implies \quad dx = v\,dt \quad  \implies \quad \int\,dx = \int v\,dt\]
+        \[x = \int v\,dt + \bold{C}\]
+        Należy pamiętać o stałej całkowania $\bold{C}$, interpretowanej zwykle jako $x_0$ - położenie początkowe. W większości
+        wypadków stałą będziemy wyliczali z warunków początkowych zadania, np. $\mathit{x(0) = 0}$.
 
         \begin{definition}[Prędkość średnia]
-            Oszacowana wartość prędkości na danym odcinku. Prędkość średnią wyznaczamy poprzez wzór:
+            Oszacowana wartość prędkości na danym odcinku. Oznaczana $\bar{v}$. Prędkość średnią wyznaczamy poprzez wzór:
             \[\bar{v} = \frac{S_c}{t_c}\]
             gdzie:
             \begin{itemize}
                 \item[--] $S_c$ - całkowity dystans przebyty w czasie $t_c$
                 \item[--] $t_C$ - całkowity czas
             \end{itemize}
-
+            Potocznie: \textbf{Cała droga przez cały czas}
         \end{definition}
     
         
