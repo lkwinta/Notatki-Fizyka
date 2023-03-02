@@ -1,0 +1,9 @@
+version: '3'
+
+tasks:
+  fizyka:
+    desc: Compile fizyka.tex to pdf
+    sources:
+      - src/*
+    cmds:
+      - tectonic "./src/fizyka.tex" -Z search-path="src" --outdir "pdf"
