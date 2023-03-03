@@ -30,7 +30,7 @@
     {
         \begin{center}
         \begin{tabular}{|p{1\textwidth}|}
-        \hline\\
+        \hline
             Definicja: #1\\[2ex]
         \begin{em}
         \Large
@@ -136,18 +136,28 @@
         \begin{definition}[Punkt materialny]
             Punktem materialnym nazywamy obiekt obdarzony masą, których rozmiar (aka objętość) można zaniedbać.
         \end{definition}
+        \begin{definition}[Przemieszczenie]
+            Zmiana położenia ciała względem jakiegoś układu odniesienia, zwykle punktu $(0,\ 0)$ w układzie współrzednych. 
+            Wektor przemieszczenia oznaczamy $r$. Występuje poniższa zależność:
+            \[\vec{r} = \vec{i}x + \vec{j}y\]
+            gdzie:
+            \begin{itemize}
+                \item[--] x - współrzedna $x$ wektora przemieszczenia
+                \item[--] y - współrzędna $y$ wektora przemieszczenia
+            \end{itemize}
+        \end{definition}
     \subsection{\LARGE Prędkość}
         \Large
         \begin{definition}[Prędkość]
             Prędkość to zmiana położenia w czasie:
-            \[\vec{v} = \frac{\Delta\vec{x}}{\Delta t}\]
+            \[\vec{v} = \frac{x - x_0}{t - t_0} = \frac{\Delta\vec{r}}{\Delta t}\]
             gdzie:
             \begin{itemize}
-                \item[--] $\Delta\vec{x}$ - wektor rozpięty pomiędzy poprzednim a nowym położeniem
+                \item[--] $\Delta\vec{r}$ - wektor przemieszczenia rozpięty pomiędzy poprzednim($x_0$) a nowym($x$) położeniem
                 \item[--] $\Delta t$ - czas w jakim nastąpiła ta zmiana 
             \end{itemize}
             Bardziej ogólnie: \textbf{pochodna drogi(położenia) po czasie} 
-            \[\vec{v} = \frac{d\vec{x}}{dt} = \frac{dx}{dt}\vec{i} + \frac{dy}{dt}\vec{j}\]
+            \[\vec{v} = \frac{d\vec{r}}{dt} = \frac{dx}{dt}\vec{i} + \frac{dy}{dt}\vec{j}\]
         \end{definition}
         Jeśli ciało znajdowało się w chwili $t_0$ w punkcie $x_0$, a w chwili $t$ w punkcie $x$ to:
         \[x - x_0 = v(t - t_0) \]
@@ -189,7 +199,7 @@
         \Large
         \begin{definition}[Przyspieszenie]
             Przyspieszenie to wielkość opisująca jak zmienia się prędkość ciała w czasie:
-            \[\vec{a} = \frac{\Delta\vec{v}}{\Delta t}\]
+            \[\vec{a} = \frac{\vec{v} - \vec{v_0}}{t - t_0} = \frac{\Delta\vec{v}}{\Delta t}\]
             gdzie:
             \begin{itemize}
                 \item[--] $\Delta\vec{v}$ - wektor będący różnicą pomiędzy nowym a starym wektorem prędkości
@@ -198,12 +208,108 @@
             Bardziej ogólnie: \textbf{pochodna prędkości po czasie}
             \[\vec{a} = \frac{d\vec{v}}{dt} = \frac{dv_x}{dt}\vec{i} + \frac{dv_y}{dt}\vec{j}\]
         \end{definition}
-        Ze względu na wartość przyspieszenia wyróżniamy rodzaje ruchu:
+        Ze względu na wektor przyspieszenia wyróżniamy rodzaje ruchu:
         \begin{itemize}
             \item[--] $a = 0$ - \textbf{jednostajny}
-            \item[--] $a = \text{const}$ - \textbf{jednostajnie} opóźniony ($a < 0$) lub przyspieszony ($a > 0$)
+            \item[--] $\vec{a} = \text{const}$\footnote{\large Warto zwrócić uwagę, że implikuje to stały kierunek i zwrot wektora przyspieszenia} 
+            - \textbf{jednostajnie} opóźniony ($a < 0$) lub przyspieszony ($a > 0$)
             \item[--] $a \neq \text{const}$ - \textbf{niejednostajnie} opóźniony ($a < 0$) lub przyspieszony ($a > 0$)\footnote{\large O wartości przyspieszenia mówimy w przedziale czasu}
         \end{itemize}
+    \pagebreak
+    \subsection{\LARGE Ruch jednostajnie przyspieszony}
+        \Large
+        \begin{definition}[Ruch jednostajnie przyspieszony]
+            Ruch w którym wektor przyspieszenia jest stały:
+            \[\vec{a} = \text{const}\] 
+        \end{definition}
+        Z ruchem \underline{\textbf{jednostajnie}} przyspieszonym wiążą się pewne uogólnienia o których warto pamiętać.
+        Wszystkie wynikają z ogólnych wzorów więc można je wyprowadzić.\\
+
+        \noindent Zależność prędkości od czasu możemy wyprowadzić korzystając z podstawowej zależności na przyspieszenie:
+        \[a = \frac{\Delta v}{\Delta t} = \frac{v - v_0}{t - t_0} \overset{t_0 = 0}{=} \frac{v - v_0}{t} \quad\implies\quad at = v - v_0\]
+        \[v(t) = v_0 + at\]
+        Podobnie korzystając z zależności na prędkość średnią możemy wyprowadzić zależność na położenie:
+        \[\bar{v} = \frac{\Delta x}{\Delta t} = \frac{x - x_0}{t - t_0} \overset{t_0 = 0}{=} \frac{x - x_0}{t} \quad\implies\quad \bar{v}t = x - x_0\]
+        \[x(t) = x_0 + \bar{v}t\]
+        Liniowa zależność prędkości od czasu sprowadza średnią prędkość do średniej arytmetycznej:
+        \[\bar{v} = \frac{v + v_0}{2}\]
+        \\
+        Łącząc trzy powyższe równania możemy wyprowadzić zależność na położenie od czasu dla ruchu \textbf{jednostajnie zmiennego}:
+        \[x(t) = x_0 + v_0t + \frac{at^2}{2}\]
+        
+    \subsection{\LARGE Ruch złożony}
+        \Large
+        Jest to rodzaj ruchu gdzie przemieszczenie odbywa się równocześnie względem osi $OX$ i $OY$.
+        Układy takie opisuje się stosując zestawy równań skalarnych względem obu osi osobno.\\ 
+        Rozważmy np. ruch jednostajnie przyspieszony względem obu osi.
+        \[ \vec{a} = \text{const}\] 
+        \[ \vec{v} = \vec{v_o} + \vec{a}t \]
+        \[ \vec{r} = \vec{r_0} + \vec{v_0}t + \frac{\vec{a}t}{2}\]
+        Znając wektor przyspieszenia jesteśmy wstanie stworzyć dwa zestawy \textbf{skalarnych} równań ruchu opisujące
+        ruch wzdłuż prostopadłych do siebie osi.\\
+        \begin{center}
+            \begin{tabular}{ |c|c| } 
+                \hline
+                Równania wzdłóż osi $OX$ & Równania wzdłóż osi $OY$ \\ 
+                \hline
+                $a_x = \text{const}$ & $a_y = \text{const}$  \\ 
+                $v_x = v_{x0} + a_xt$ & $v_y = v_{y0} + a_yt$  \\ 
+                $x = x_0 + v_{x0}t + \frac{a_xt^2}{2}$ & $y = y_0 + v_{y0}t + \frac{a_yt^2}{2}$  \\ 
+                \hline
+            \end{tabular}
+        \end{center}  
+    \pagebreak
+    \subsection*{\Large Rzut ukośny}
+    Najbardziej oczywistym przykładem ruchu złożonego jest rzut ukośny. 
+    Rozważmy ciało wyrzucane z poziomu podłoża pod kątem $\alpha$ do podłoża z prędkością styczną 
+    równą $v_0$. Przyjmuję następujące oznaczenia:
+    \begin{itemize}
+        \item[--] $z$ odległość jaką przeleci ciało zanim uderzy w ziemię
+        \item[--] $v_x$ pozioma składowa prędkości początkowej
+        \item[--] $v_y$ pionowa składowa prędkości początkowej
+    \end{itemize}
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{rzut_ukosny.png}
+    \end{center}
+    Stosując podstawowe zależności trygonometryczne możemy rozłożyć wektor prędkości początkowej
+    \[v_{x0} = v_0\cos(\alpha)\]
+    \[v_{y0} = v_0\sin(\alpha)\]
+    Ponieważ ciało zostało rzucone swobodnie i zaniedbujemy opory ruchu w kierunku poziomym ciało 
+    porusza się ruchem jednostajnym prostoliniowym, a w kierunku pionowym jednostajnie opóźnionym 
+    (później przyspieszonym) wynikającym z siły grawitacji, \textbf{wektor przyspieszenia grawitacyjnego 
+    skierowany jest przeciwnie do wektora składowego prędkości początkowej w kierunku pionowym, więc 
+    $g$ idzie ze znakiem $-$}:
+    \[v_x = v_{x0} = v_0\cos(\alpha)\]
+    \[v_y = v_{y0} - gt = v_0\sin(\alpha) - gt\]
+    Teraz stosując twierdzenie pitagorasa możemy wyprowadzić zależność na prędkość \textbf{styczną do toru ruchu} od czasu:
+    \[v(t) = \sqrt{v_x^2(t) + v_y^2(t)} = \sqrt{v_0 - 2v_0gtsin(\alpha) + g^2t^2}\]
+    Równania ruchu względem obu osi mają następującą postać:
+    \[x(t) = x_0(=0) + v_{x0}t = v_0\cos(\alpha)t\]
+    \[y(t) = y_0(=0) + v_{y0}t - \frac{gt^2}{2} = v_0\sin(\alpha)t - \frac{gt^2}{2}\]
+    Mając równania ruchu bardzo łatwo wyprowadzić zależnośc $y(x)$ pokazującą tor ruchu ciała:
+    \[x = v_0\cos(\alpha)t \quad\implies\quad t = \frac{x}{v_0\cos(\alpha)}\]
     
+    \noindent Podstawiając do równania $y(t)$ otrzymujemy:
+    
+    \[y(x) = v_0\sin(\alpha)\frac{x}{v_0\cos(\alpha)} - \frac{g(\frac{x}{v_0\cos(\alpha)})^2}{2}\]
+
+    \noindent upraszczając:
+
+    \[y(x) = x\tan{\alpha} - \frac{g}{2v_0^2\cos^2(\alpha)}x^2\]
+
+    \noindent Aby policzyć zasięg rzutu ukośnego potrzebujemy policzyć całkowity czas wznoszenia $t_1$ i opadania $t_2$.
+    Można zauważyć, że pomijając opory ruchu czasy te będą sobie równe, a więc:
+    \[v_y(t_1) = 0\]
+    \[v_0\sin(\alpha) - gt_1 = 0\]
+    \[t_1 = \frac{v_0\sin(\alpha)}{g}\]
+    \[t_c = t_1 + t_2 = 2t_1\]
+    \[t_c = \frac{2v_0\sin(\alpha)}{g} \]
+    Skoro mamy czas po jakim czasie ciało uderzy o ziemię, zasięg rzutu będzie równy odległości jaką ciało 
+    przebędzie w kierunku poziomym:
+    \[z = x(t_c) = v_0\cos(\alpha)t_c = v_0\cos(\alpha)\frac{2v_0\sin(\alpha)}{g}
+    \implies z = \frac{2v_0^2\sin(2\alpha)}{g}\]
+
+    
+
         
 \end{document}
