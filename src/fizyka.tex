@@ -65,6 +65,21 @@
 \pagebreak
 
 \section{\huge Wiadomości wstępne i wektory}
+    \Large
+    W całych notatkach mogą pojawić się poniżej zdefiniowane wektory - a dokładniej 
+    wersory rozpinające przestrzenie $\mathbb{R}^2$ i $\mathbb{R}^3$:\\
+    $\mathbb{R}^2$:
+    \begin{itemize}
+        \item [] $\vec{i} = (1,\ 0)$
+        \item [] $\vec{j} = (0,\ 1)$
+    \end{itemize}
+    $\mathbb{R}^3$:
+    \begin{itemize}
+        \item [] $\vec{i} = (1,\ 0,\ 0)$
+        \item [] $\vec{j} = (0,\ 1,\ 0)$
+        \item [] $\vec{k} = (0,\ 0,\ 1)$
+    \end{itemize}
+
     \subsection{\LARGE Suma wektorów}
         \Large 
         Niech:
@@ -111,6 +126,7 @@
         
 \section{\huge Podstawy kinematyki}
     \subsection{\LARGE Podstawowe pojęcia}
+        \Large
         \begin{definition}[Ruch]
             Zmiana wzajemnego położenia ciał względem innych ciał wraz z upływem czasu.
         \end{definition}
@@ -121,11 +137,17 @@
             Punktem materialnym nazywamy obiekt obdarzony masą, których rozmiar (aka objętość) można zaniedbać.
         \end{definition}
     \subsection{\LARGE Prędkość}
+        \Large
         \begin{definition}[Prędkość]
-            Zmiana położenia w czasie:
-            $\vec{v} = \frac{\Delta\vec{x}}{\Delta t}$
-            
-            Bardziej potocznie: \textbf{pierwsza pochodna drogi(położenia) po czasie}
+            Prędkość to zmiana położenia w czasie:
+            \[\vec{v} = \frac{\Delta\vec{x}}{\Delta t}\]
+            gdzie:
+            \begin{itemize}
+                \item[--] $\Delta\vec{x}$ - wektor rozpięty pomiędzy poprzednim a nowym położeniem
+                \item[--] $\Delta t$ - czas w jakim nastąpiła ta zmiana 
+            \end{itemize}
+            Bardziej ogólnie: \textbf{pochodna drogi(położenia) po czasie} 
+            \[\vec{v} = \frac{d\vec{x}}{dt} = \frac{dx}{dt}\vec{i} + \frac{dy}{dt}\vec{j}\]
         \end{definition}
         Jeśli ciało znajdowało się w chwili $t_0$ w punkcie $x_0$, a w chwili $t$ w punkcie $x$ to:
         \[x - x_0 = v(t - t_0) \]
@@ -139,11 +161,13 @@
 
         \[v = \lim_{\Delta t \rightarrow 0}{\frac{\Delta x}{\Delta t}} = \frac{dx}{dt}\]
         A więc prędkość jest pierwszą pochodną położenia (drogi) po czasie.\\
-        Warto tutaj zwrówicić uwagę, że prawdziwa też jest operacja odwrotna:
+        Warto tutaj zwrówicić uwagę, że prawdziwa też jest operacja odwrotna \textit{\textbf{(nie jest to do końca 
+        operacja poprawna stricte matematycznie lecz mająca sens fizyczny - w matematyce symbol pochodnej
+        $\mathbf{\frac{d f(x)}{dx}}$ traktujemy jako jedność, w fizyce nic nie stoi na przeszkodzie aby traktować to jako ułamek)}}:
         \[v = \frac{dx}{dt}  \quad  \implies \quad dx = v\,dt \quad  \implies \quad \int\,dx = \int v\,dt\]
         \[x = \int v\,dt + \bold{C}\]
         Należy pamiętać o stałej całkowania $\bold{C}$, interpretowanej zwykle jako $x_0$ - położenie początkowe. W większości
-        wypadków stałą będziemy wyliczali z warunków początkowych zadania, np. $\mathit{x(0) = 0}$.
+        wypadków stałą będziemy wyliczali z warunków początkowych zadania, np. $\mathit{x(0) = 0}$. 
 
         \begin{definition}[Prędkość średnia]
             Oszacowana wartość prędkości na danym odcinku. Oznaczana $\bar{v}$. Prędkość średnią wyznaczamy poprzez wzór:
@@ -155,6 +179,31 @@
             \end{itemize}
             Potocznie: \textbf{Cała droga przez cały czas}
         \end{definition}
+        Na przykład gdy interesuje nas prędkość średnia w przedziale $<t_0, t_k>$ możemy zastosować całkę oznaczoną by policzyć
+        całkowitą drogę:
+        \[S_c = \int_{t_0}^{t_k} v\,dt\]
+        Średnia prędkość dana będzie wtedy wzorem:
+        \[\bar{v} = \frac{S_c}{t_k - t_0}\]
+    \pagebreak
+    \subsection{\LARGE Przyspieszenie}
+        \Large
+        \begin{definition}[Przyspieszenie]
+            Przyspieszenie to wielkość opisująca jak zmienia się prędkość ciała w czasie:
+            \[\vec{a} = \frac{\Delta\vec{v}}{\Delta t}\]
+            gdzie:
+            \begin{itemize}
+                \item[--] $\Delta\vec{v}$ - wektor będący różnicą pomiędzy nowym a starym wektorem prędkości
+                \item[--] $\Delta t$ - czas w jakim nastąpiła ta zmiana 
+            \end{itemize}
+            Bardziej ogólnie: \textbf{pochodna prędkości po czasie}
+            \[\vec{a} = \frac{d\vec{v}}{dt} = \frac{dv_x}{dt}\vec{i} + \frac{dv_y}{dt}\vec{j}\]
+        \end{definition}
+        Ze względu na wartość przyspieszenia wyróżniamy rodzaje ruchu:
+        \begin{itemize}
+            \item[--] $a = 0$ - \textbf{jednostajny}
+            \item[--] $a = \text{const}$ - \textbf{jednostajnie} opóźniony ($a < 0$) lub przyspieszony ($a > 0$)
+            \item[--] $a \neq \text{const}$ - \textbf{niejednostajnie} opóźniony ($a < 0$) lub przyspieszony ($a > 0$)\footnote{\large O wartości przyspieszenia mówimy w przedziale czasu}
+        \end{itemize}
     
         
 \end{document}
