@@ -139,11 +139,12 @@
         \begin{definition}[Przemieszczenie]
             Zmiana położenia ciała względem jakiegoś układu odniesienia, zwykle punktu $(0,\ 0)$ w układzie współrzednych. 
             Wektor przemieszczenia oznaczamy $r$. Występuje poniższa zależność:
-            \[\vec{r} = \vec{i}x + \vec{j}y\]
+            \[\vec{r} = \vec{i}x + \vec{j}y + \vec{k}z = (x,\ y,\ z)\]
             gdzie:
             \begin{itemize}
                 \item[--] x - współrzedna $x$ wektora przemieszczenia
                 \item[--] y - współrzędna $y$ wektora przemieszczenia
+                \item[--] z - współrzędna $z$ wektora przemieszczenia
             \end{itemize}
         \end{definition}
     \subsection{\LARGE Prędkość}
@@ -157,7 +158,9 @@
                 \item[--] $\Delta t$ - czas w jakim nastąpiła ta zmiana 
             \end{itemize}
             Bardziej ogólnie: \textbf{pochodna drogi(położenia) po czasie} 
-            \[\vec{v} = \frac{d\vec{r}}{dt} = \frac{dx}{dt}\vec{i} + \frac{dy}{dt}\vec{j}\]
+            \[\vec{v} = \frac{d\vec{r}}{dt} = \frac{dx}{dt}\vec{i} + \frac{dy}{dt}\vec{j} + \frac{dz}{dt}\vec{k} 
+            = \left (\frac{dx}{dt},\ \frac{dy}{dt},\ \frac{dz}{dt} \right )\]
+            gdzie $x(t)$, $y(t)$, $z(t)$ to funkcje opisujące zmianę położenia względem każdej z osi.
         \end{definition}
         Jeśli ciało znajdowało się w chwili $t_0$ w punkcie $x_0$, a w chwili $t$ w punkcie $x$ to:
         \[x - x_0 = v(t - t_0) \]
@@ -206,7 +209,9 @@
                 \item[--] $\Delta t$ - czas w jakim nastąpiła ta zmiana 
             \end{itemize}
             Bardziej ogólnie: \textbf{pochodna prędkości po czasie}
-            \[\vec{a} = \frac{d\vec{v}}{dt} = \frac{dv_x}{dt}\vec{i} + \frac{dv_y}{dt}\vec{j}\]
+            \[\vec{a} = \frac{d\vec{v}}{dt} = \frac{dv_x}{dt}\vec{i} + \frac{dv_y}{dt}\vec{j} + \frac{dv_z}{dt}\vec{k} 
+            = \left (\frac{dv_x}{dt},\ \frac{dv_y}{dt},\ \frac{dv_z}{dt} \right )\]
+            gdzie $v_x(t)$, $v_y(t)$, $v_z(t)$ to funkcje opisujące prędkość względem każdej osi.
         \end{definition}
         Ze względu na wektor przyspieszenia wyróżniamy rodzaje ruchu:
         \begin{itemize}
