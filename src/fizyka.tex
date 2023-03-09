@@ -14,6 +14,7 @@
 \usepackage{graphicx} 
 \usepackage{isotope}
 \usepackage{array}
+\usepackage{float}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -161,6 +162,9 @@
             \[\vec{v} = \frac{d\vec{r}}{dt} = \frac{dx}{dt}\vec{i} + \frac{dy}{dt}\vec{j} + \frac{dz}{dt}\vec{k} 
             = \left (\frac{dx}{dt},\ \frac{dy}{dt},\ \frac{dz}{dt} \right )\]
             gdzie $x(t)$, $y(t)$, $z(t)$ to funkcje opisujące zmianę położenia względem każdej z osi.
+        \end{definition}
+        \begin{definition}[Szybkość]
+            Wielkość skalarna. Wartość wektora prędkości w danej chwili $t$. Czasami równa prędkości średniej.
         \end{definition}
         Jeśli ciało znajdowało się w chwili $t_0$ w punkcie $x_0$, a w chwili $t$ w punkcie $x$ to:
         \[x - x_0 = v(t - t_0) \]
@@ -314,7 +318,42 @@
     \[z = x(t_c) = v_0\cos(\alpha)t_c = v_0\cos(\alpha)\frac{2v_0\sin(\alpha)}{g}
     \implies z = \frac{2v_0^2\sin(2\alpha)}{g}\]
 
-    
+    \subsection{\LARGE Ruch po okręgu}
+    \begin{definition}[Ruch po okręgu]
+        Ruch w którym tor ruchu jest okrąg. Wektor prędkości $v_s$ jest stycznyczny do okręgu. 
+        Występuje przyspieszenie radialne/normalne prostopadłe do wektora prędkości - oznaczamy $a_r$ 
+        - gdy mówimy dokładnie o okręgu przyspieszenie to można nazwać przyspieszeniem dośrodkowym, lecz nazwać
+        radialne/normalne jest bardziej ogólna.
+    \end{definition}
 
+    Aby wyprowadzić zależności opisujące ruch po okręgu rozważmy chwilię
+    gdy ciało znajduje się w punkcie $P$. Przyjmuję następujące oznaczenia:
+    \begin{itemize}
+        \item [--] $x_P$ i $y_P$ współrzędne $x$ i $y$ punktu $P$
+        \item [--] $\vec{v}$ wektor prędkości stycznej do okręgu, $v$ wartość wektora prędkości
+        \item [--] $v_x$ i $v_y$ pozioma i pionowa składowa wektora prędkości $\vec{v}$
+        \item [--] $r$ promień okręgu po którym odbywa się ruch
+        \item [--] $\theta$ kąt pomiędzy osią $OX$ a promieniem poprowadzonym między punktami $(0,\ 0)$ i $P$
+    \end{itemize}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[]{ruchokrag.png}
+        \caption{Na rysunku pomylono $\vec{v_x}$ i $\vec{v}$}
+    \end{figure}
+    Zapisujemy równania zależności trygonometrycznych:
+    \[\sin\theta = \frac{y_P}{r} \quad\quad \cos\theta = \frac{x_P}{r}\]
+    Rozkładamy prędkość styczną na składowe (składowa pozioma jest ujemna bo ciało porusza się "wstecz" osi $OX$):
+    \[\vec{v} = \vec{i}v_x + \vec{j}v_y = \vec{i}(-v \sin\theta) + \vec{j}(v\cos\theta)\]
+    \[\vec{v} = \vec{i}\left (-v \frac{y_P}{r} \right ) + \vec{j}\left (v \frac{x_P}{r} \right )\]    
+    Aby obliczyć przyspieszenie "dośrodkowe" wystarczy policzyć pochodną. $v$ i $r$ to stałe więc wystarczy 
+    policzyć pochodne $x_P(t)$ i $y_P(t)$.
+    \[\vec{a_r} = \frac{d\vec{v}}{dt} =
+    \vec{i}\left (-\frac{v}{r} \frac{dy_P}{dt} \right ) + \vec{j}\left (\frac{v}{r} \frac{dx_P}{dt} \right ) 
+    = \vec{i}\left (-\frac{v}{r} v_y \right ) + \vec{j}\left (\frac{v}{r} v_x \right ) \]
+    Wstawiając wzory na prędkość otrzymujemy:
+    \[\vec{a_r} = \vec{i}\left (-\frac{v^2}{r} \cos\theta \right ) + \vec{j}\left (\frac{v^2}{r} \sin\theta \right )\]
+    Wartość przyspiesznenia otrzymujemy z tw. Pitagorasa:
+    \pagebreak
+    \section{\huge Dynamika}
         
 \end{document}
