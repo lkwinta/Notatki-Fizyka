@@ -71,14 +71,14 @@
     wersory rozpinające przestrzenie $\mathbb{R}^2$ i $\mathbb{R}^3$:\\
     $\mathbb{R}^2$:
     \begin{itemize}
-        \item [] $\vec{i} = (1,\ 0)$
-        \item [] $\vec{j} = (0,\ 1)$
+        \item [] $\hat{i} = (1,\ 0)$
+        \item [] $\hat{j} = (0,\ 1)$
     \end{itemize}
     $\mathbb{R}^3$:
     \begin{itemize}
-        \item [] $\vec{i} = (1,\ 0,\ 0)$
-        \item [] $\vec{j} = (0,\ 1,\ 0)$
-        \item [] $\vec{k} = (0,\ 0,\ 1)$
+        \item [] $\hat{i} = (1,\ 0,\ 0)$
+        \item [] $\hat{j} = (0,\ 1,\ 0)$
+        \item [] $\hat{k} = (0,\ 0,\ 1)$
     \end{itemize}
 
     \subsection{\LARGE Suma wektorów}
@@ -105,16 +105,16 @@
         Niech:
         \[\vec{a} := (a_1, a_2, a_3) \hspace{1cm} \vec{b} = (b_1, b_2, b_3) \]
         oraz:      
-        \[\vec{i} := (1, 0, 0) \hspace{0,75cm} \vec{j} = (0, 1, 0) \hspace{0,75cm} \vec{k} = (0, 0, 1) \]
+        \[\hat{i} := (1, 0, 0) \hspace{0,75cm} \hat{j} = (0, 1, 0) \hspace{0,75cm} \hat{k} = (0, 0, 1) \]
         Wtedy, iloczyn wektorowy ma następującą postać:
         \[
             \vec{a} \times \vec{b} = 
             \begin{vmatrix}
-                \vec{i} & \vec{j} & \vec{k} \\
+                \hat{i} & \hat{j} & \hat{k} \\
                 a_1 & a_2 & a_3 \\
                 b_1 & b_2 & b_3
             \end{vmatrix}
-            = \vec{i}(a_2b_3 - a_3b_2) + \vec{j}(a_3b_1 - a_1b3) + \vec{k}(a_1b_2 - a_2b_1) =     
+            = \hat{i}(a_2b_3 - a_3b_2) + \hat{j}(a_3b_1 - a_1b3) + \hat{k}(a_1b_2 - a_2b_1) =     
         \]
         \[ = (a_2b_3 - a_3b_2, a_3b_1 - a_1b3, a_1b_2 - a_2b_1 )\]
         Tak jak przy iloczynie skalarnym występuje zależność związana z kątem między wektorami:
@@ -140,7 +140,7 @@
         \begin{definition}[Przemieszczenie]
             Zmiana położenia ciała względem jakiegoś układu odniesienia, zwykle punktu $(0,\ 0)$ w układzie współrzednych. 
             Wektor przemieszczenia oznaczamy $r$. Występuje poniższa zależność:
-            \[\vec{r} = \vec{i}x + \vec{j}y + \vec{k}z = (x,\ y,\ z)\]
+            \[\vec{r} = \hat{i}x + \hat{j}y + \hat{k}z = (x,\ y,\ z)\]
             gdzie:
             \begin{itemize}
                 \item[--] x - współrzedna $x$ wektora przemieszczenia
@@ -159,7 +159,7 @@
                 \item[--] $\Delta t$ - czas w jakim nastąpiła ta zmiana 
             \end{itemize}
             Bardziej ogólnie: \textbf{pochodna drogi(położenia) po czasie} 
-            \[\vec{v} = \frac{d\vec{r}}{dt} = \frac{dx}{dt}\vec{i} + \frac{dy}{dt}\vec{j} + \frac{dz}{dt}\vec{k} 
+            \[\vec{v} = \frac{d\vec{r}}{dt} = \frac{dx}{dt}\hat{i} + \frac{dy}{dt}\hat{j} + \frac{dz}{dt}\hat{k} 
             = \left (\frac{dx}{dt},\ \frac{dy}{dt},\ \frac{dz}{dt} \right )\]
             gdzie $x(t)$, $y(t)$, $z(t)$ to funkcje opisujące zmianę położenia względem każdej z osi.
         \end{definition}
@@ -213,7 +213,7 @@
                 \item[--] $\Delta t$ - czas w jakim nastąpiła ta zmiana 
             \end{itemize}
             Bardziej ogólnie: \textbf{pochodna prędkości po czasie}
-            \[\vec{a} = \frac{d\vec{v}}{dt} = \frac{dv_x}{dt}\vec{i} + \frac{dv_y}{dt}\vec{j} + \frac{dv_z}{dt}\vec{k} 
+            \[\vec{a} = \frac{d\vec{v}}{dt} = \frac{dv_x}{dt}\hat{i} + \frac{dv_y}{dt}\hat{j} + \frac{dv_z}{dt}\hat{k} 
             = \left (\frac{dv_x}{dt},\ \frac{dv_y}{dt},\ \frac{dv_z}{dt} \right )\]
             gdzie $v_x(t)$, $v_y(t)$, $v_z(t)$ to funkcje opisujące prędkość względem każdej osi.
         \end{definition}
@@ -343,15 +343,15 @@
     Zapisujemy równania zależności trygonometrycznych:
     \[\sin\theta = \frac{y_P}{r} \quad\quad \cos\theta = \frac{x_P}{r}\]
     Rozkładamy prędkość styczną na składowe (składowa pozioma jest ujemna bo ciało porusza się "wstecz" osi $OX$):
-    \[\vec{v} = \vec{i}v_x + \vec{j}v_y = \vec{i}(-v \sin\theta) + \vec{j}(v\cos\theta)\]
-    \[\vec{v} = \vec{i}\left (-v \frac{y_P}{r} \right ) + \vec{j}\left (v \frac{x_P}{r} \right )\]    
+    \[\vec{v} = \hat{i}v_x + \hat{j}v_y = \hat{i}(-v \sin\theta) + \hat{j}(v\cos\theta)\]
+    \[\vec{v} = \hat{i}\left (-v \frac{y_P}{r} \right ) + \hat{j}\left (v \frac{x_P}{r} \right )\]    
     Aby obliczyć przyspieszenie "dośrodkowe" wystarczy policzyć pochodną. $v$ i $r$ to stałe więc wystarczy 
     policzyć pochodne $x_P(t)$ i $y_P(t)$.
     \[\vec{a_r} = \frac{d\vec{v}}{dt} =
-    \vec{i}\left (-\frac{v}{r} \frac{dy_P}{dt} \right ) + \vec{j}\left (\frac{v}{r} \frac{dx_P}{dt} \right ) 
-    = \vec{i}\left (-\frac{v}{r} v_y \right ) + \vec{j}\left (\frac{v}{r} v_x \right ) \]
+    \hat{i}\left (-\frac{v}{r} \frac{dy_P}{dt} \right ) + \hat{j}\left (\frac{v}{r} \frac{dx_P}{dt} \right ) 
+    = \hat{i}\left (-\frac{v}{r} v_y \right ) + \hat{j}\left (\frac{v}{r} v_x \right ) \]
     Wstawiając wzory na prędkość otrzymujemy:
-    \[\vec{a_r} = \vec{i}\left (-\frac{v^2}{r} \cos\theta \right ) + \vec{j}\left (\frac{v^2}{r} \sin\theta \right )\]
+    \[\vec{a_r} = \hat{i}\left (-\frac{v^2}{r} \cos\theta \right ) + \hat{j}\left (\frac{v^2}{r} \sin\theta \right )\]
     Wartość przyspiesznenia otrzymujemy z tw. Pitagorasa:
     \[a_r = \sqrt{\left (-\frac{v^2}{r} \cos\theta \right )^2 + \left (\frac{v^2}{r} \sin\theta \right )^2} = \sqrt{\frac{v^4}{r^2}(\cos^2\theta + \sin^2\theta)} = \frac{v^2}{r}\]
     Przyspieszenie radialne jest zwrócone prostopadle do toru ruchu czyli w tym wypadku do 
