@@ -88,7 +88,7 @@
         Wtedy suma wektorów ma następującą postać:
         \[\vec{a} + \vec{b} = (a_1 + b_1,\ a_2 + b_2,\ a_3 + b_3)\] \\
         \begin{center}
-            \includegraphics[width=10cm]{suma_wektorow.png} 
+            \includegraphics[width=10cm]{img/suma_wektorow.png} 
         \end{center}
         
     \subsection{\LARGE Iloczyn skalarny}
@@ -122,7 +122,7 @@
         Kierunek iloczynu wektorowego $\vec{a} \times \vec{b}$ jest prostopadły do płaszczyzny 
         stworzonej przez wektory $\vec{a}$ i $\vec{b}$.\\ Natomiast zwrot tego wektora można określić stosując zasadę prawej dłoni: \\
         \begin{center}
-            \includegraphics[width=10cm]{prawareka.png} 
+            \includegraphics[width=10cm]{img/prawareka.png} 
         \end{center}
         
 \section{\huge Podstawy kinematyki}
@@ -278,7 +278,7 @@
         \item[--] $v_y$ pionowa składowa prędkości początkowej
     \end{itemize}
     \begin{center}
-        \includegraphics[width=0.7\textwidth]{rzut_ukosny.png}
+        \includegraphics[width=0.7\textwidth]{img/rzut_ukosny.png}
     \end{center}
     Stosując podstawowe zależności trygonometryczne możemy rozłożyć wektor prędkości początkowej
     \[v_{x0} = v_0\cos(\alpha)\]
@@ -337,7 +337,7 @@
     \end{itemize}
     \begin{figure}[H]
         \centering
-        \includegraphics[]{ruchokrag.png}
+        \includegraphics[]{img/ruchokrag.png}
         \caption{Na rysunku pomylono $\vec{v_x}$ i $\vec{v}$}
     \end{figure}
     Zapisujemy równania zależności trygonometrycznych:
@@ -365,7 +365,67 @@
     \[v = \frac{l}{T} = \frac{2\pi r}{T} \]
     Korzystając z tego wzoru możemy wyrazić przyspieszenie dośrodkowe:
     \[a_r = \frac{v^2}{r} = \frac{\left (\frac{2\pi r}{T} \right )^2}{r} = \frac{4\pi^2 r}{T^2}\]
-    
+    Przy ruchu po okręgu/ruchu obrotowym pojawiają się wielkości skalarne opisujące stricte obrót. 
+    Są to wielkości \textbf{skalarne}. Na potrzeby przyjmę następujące oznaczenia:
+    \begin{itemize}
+        \item [--] $s$ - długość łuku jakie zatoczyło ciało
+        \item [--] $x$ i $y$ - pozycja ciała względem osi układu współrzędnych
+        \item [--] $\vec{R}$ - wektor położenia względem środka układu współrzędnych, $R$ jego wartość
+        \item [--] $\varphi$ - kąt jaki zatoczyło ciało
+    \end{itemize}
+    \begin{center}
+        \includegraphics{img/ruchokrag2.png}
+    \end{center}
+    \begin{definition}[Droga kątowa]
+        Jest to kąt jaki zatoczyło ciało. Jest to iloraz długości łuku przebytego przez ciało i 
+        promienia wodzącego. Wyrażamy w radianach.
+        \[\varphi = \frac{s(t)}{R}\]
+    \end{definition}
+    \begin{definition}[Prędkość kątowa]
+        Jest to szybkość zmiany "kąta zatoczonego przez ciało". Analogicznie do zwykłej prędkości jest to 
+        iloraz drogi kątowej przebytej w czasie. Jednostka: $\frac{1}{s}$
+        \[\omega = \frac{d\varphi}{dt} = \frac{d}{dt} \frac{s(t)}{R} = \frac{v}{R}\]
+        Gdy prędkość styczna jest stała, szybkość kontowa wyraża się następująco:
+        \[\omega = \frac{2\pi}{T}\]
+    \end{definition}
+    \begin{definition}[Przyspieszenie kątowa]
+        Opisuje jak zmienia się prędkość kątowa w czasie. Analogicznie do przyspieszenia w ruchu
+        postępowym(zwykłym) jest to pochodna z prędkości kątowej. Jednostka $\frac{1}{s^2}$
+        \[\alpha = \frac{d \omega}{dt} = \frac{d}{dt}\frac{v}{R} = \frac{a}{R} \]
+    \end{definition}
+    Używając tych symboli możemy wyznaczyć wzory na podstawowe wielkości opisujące ruch po okręgu.\\
+    \textbf{Dla stałej prędkości stycznej:}    
+    \[v = \frac{2\pi R}{T} = \omega R\]
+    \[a_r = \frac{4\pi^2 R}{T^2} = \omega^2 R\]
+    \textbf{Uogólnienie:}\\
+    Korzystając z poprzednego rysunku równania ruchu wyglądają następująco:
+    \[x(t) = R\cos \varphi(t) \quad\qquad y(t) = R\sin \varphi(t) \quad\qquad \text{gdzie: } \varphi(t) = \frac{s(t)}{R}\]
+    Możemy policzyć równania prędkości:
+    \[v_x = \frac{dx}{dt} = -R \frac{d\varphi}{dt}\sin \varphi = -R \omega \sin \varphi(t) \]
+    \[v_y = \frac{dy}{dt} = R \frac{d\varphi}{dt}\cos \varphi = -R \omega \cos \varphi(t) \]
+    Teraz przyspieszenie:
+    \[a_x = \frac{d v_x}{dt} = -R \frac{d \omega}{dt} \sin \varphi - R\omega \frac{d \varphi}{dt} \cos \varphi = 
+    -R\alpha \sin \varphi - R\omega^2\cos \varphi \]
+    \[a_y = \frac{d v_y}{dt} = R \frac{d \omega}{dt} \cos \varphi - R\omega \frac{d \varphi}{dt} \sin \varphi = 
+    R\alpha \cos \varphi - R\omega^2\sin \varphi \]
+    Wstawiając równania prędkości i położenia:
+    \[a_x = -R\alpha \sin \varphi - R\omega^2\cos \varphi = \frac{\alpha}{\omega}v_x - x\omega^2\]
+    \[a_y = R\alpha \cos \varphi - R\omega^2\sin \varphi = \frac{\alpha}{\omega}v_y - y\omega^2\]
+    Przechodząc do równania wektorowego:
+    \[\vec{a} = \hat{i}a_x + \hat{j}a_y = \hat{i} \left(\frac{\alpha}{\omega}v_x - x\omega^2 \right) 
+    + \hat{j} \left(  \frac{\alpha}{\omega}v_y - y\omega^2 \right) = \]
+    \[= \frac{\alpha}{\omega} \left( \hat{i}v_x + \hat{j}v_y \right) - \omega^2\left( \hat{i}x + \hat{j}y \right) \]
+    \[\vec{a} = \frac{\alpha}{\omega}\vec{v} -\omega^2\vec{R}\]
+    W ten sposób wyprowadziliśmy wózór na wypadkowy wektor przyspieszenia w ruchu po okręgu.
+    \[\vec{a} = \vec{a_s} + \vec{a_n} = \frac{\alpha}{\omega}\vec{v} -\omega^2\vec{R}\]
+    \begin{center}
+        \includegraphics{img/ruchokrag3.png}
+    \end{center}
+    Na powyższym rysunku zaznaczono też "wektory" prędkości kątowej $\omega$ i przyspieszenia kątowego $\alpha$
+    lecz wciąż należy pamiętać, że nie są to właściwe wektory, a raczej zwyczajowe oznaczenie na rysunku 
+    w którą stronę się obracamy (z zasady prawej dłoni na podstawie wektora prędkości stycznej). 
+    \textbf{Są to wielkości skalarne}. 
+
     \pagebreak
     \section{\huge Dynamika}
     Dynamika to dział zajmujący się opisywaniem przyczyn ruchu. Istnieją 4 podstawowe oddziaływania z 
@@ -376,7 +436,7 @@
         \item [--] \textbf{oddziaływanie jądrowe słabe} - działa na małą odległość i dotyczy atomów
         \item [--] \textbf{oddziaływania jądrowe silne} - działa na małą odległości i dotyczy cząstek jądrowych
     \end{itemize}
-
+    
     \begin{definition}[Masa]
         Najprostszą definicją masy jest \textbf{ilość materii zawartej w ciele}. Jest to jedna z 
         pierwszych definicji masy.
@@ -384,15 +444,24 @@
         Newton definiował masę jako \textbf{miarę bezwładności ciała}. Ma to podłoże w 
         drugiej zasadzie dynamiki gdzie masę definiujemy jako iloraz siły i przyspieszenia.
         \[m = \frac{F}{a}\]
-
-        Masę jakiegość ciała możemy też odnieć do masy "wzorcowej" korzystając z zasady
-        zachowania pędu. Gdy rozpędzimy ciało o masie wzorcowej do prędkości $v_0$ i zderzymy
-        z ciałem o masie $m$ (tak żeby ciało $m_0$ pozostawało w spoczynku po zderzeniu) to jeśli
-        zmierzymy jego prędkość $v$ to jego masa wyrażać się będzie wzorem:
-        \[m = m_0\frac{v_0}{v}\]
     \end{definition}  
+    Masę jakiegość ciała możemy też odnieć do masy "wzorcowej" korzystając z zasady
+    zachowania pędu. Gdy rozpędzimy ciało o masie wzorcowej do prędkości $v_0$ i zderzymy
+    z ciałem o masie $m$ (tak żeby ciało $m_0$ pozostawało w spoczynku po zderzeniu) to jeśli
+    zmierzymy jego prędkość $v$ to jego masa wyrażać się będzie wzorem:
+    \[\mathbf{m = m_0\frac{v_0}{v}}\]
+    Wyprowadza się go z zasady zachowania pędu (o tym poniżej). Skoro ciało o masie $m_0$ 
+    porusza się z prędkością $v_0$ to jego pęd $p_0$ wynosi $p_0 = mv_0$. Natomiast po zderzeniu
+    ciało o nieznanej masie $m$ uzyska prędkość $v$, a więc jego pęd wyniesie $p = mv$.
+    Skoro mówimy o zderzeniu idealnie niesprężystym możemy przyrówać te pędy:
+
+
     \begin{definition}[Pęd]
         Pęd to iloczyn masy i prędkości. 
-        \[p = mv\]
+        \[\vec{p} = m\vec{v}\]
     \end{definition}  
+    \begin{definition}[Zasada zachowania pędu]
+        Mówi ona o ty
+    \end{definition}
+    
 \end{document}
