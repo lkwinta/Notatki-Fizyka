@@ -224,6 +224,10 @@
             - \textbf{jednostajnie} opóźniony ($a < 0$) lub przyspieszony ($a > 0$)
             \item[--] $a \neq \text{const}$ - \textbf{niejednostajnie} opóźniony ($a < 0$) lub przyspieszony ($a > 0$)\footnote{\large O wartości przyspieszenia mówimy w przedziale czasu}
         \end{itemize}
+        Warto pamiętać, że:
+        \[a = \frac{dv}{dt} \quad \implies \quad dv = a\ dt \quad \implies \quad \int dv = \int a\ dt\]
+        \[v = \int a\ dt + \mathbf{C}\]
+        gdzie $\mathbf{C}$ zwykle oznacza prędkość początkową ruchu.
     \pagebreak
     \subsection{\LARGE Ruch jednostajnie przyspieszony}
         \Large
@@ -425,9 +429,10 @@
     lecz wciąż należy pamiętać, że nie są to właściwe wektory, a raczej zwyczajowe oznaczenie na rysunku 
     w którą stronę się obracamy (z zasady prawej dłoni na podstawie wektora prędkości stycznej). 
     \textbf{Są to wielkości skalarne}. 
-
     \pagebreak
+    
     \section{\huge Dynamika}
+    \subsection{\LARGE Wstęp}
     Dynamika to dział zajmujący się opisywaniem przyczyn ruchu. Istnieją 4 podstawowe oddziaływania z 
     których wynikają wszystkie inne siły:
     \begin{itemize}
@@ -454,14 +459,30 @@
     porusza się z prędkością $v_0$ to jego pęd $p_0$ wynosi $p_0 = mv_0$. Natomiast po zderzeniu
     ciało o nieznanej masie $m$ uzyska prędkość $v$, a więc jego pęd wyniesie $p = mv$.
     Skoro mówimy o zderzeniu idealnie niesprężystym możemy przyrówać te pędy:
-
+    \[ p = p_0\]
+    \[ mv = m_0v_0\]
+    \[ m = m_0 \frac{v_0}{v}\]
 
     \begin{definition}[Pęd]
         Pęd to iloczyn masy i prędkości. 
         \[\vec{p} = m\vec{v}\]
-    \end{definition}  
-    \begin{definition}[Zasada zachowania pędu]
-        Mówi ona o ty
+    \end{definition} 
+
+    \begin{definition}[Siła]
+        Siłę definiujemy jako zmianę pędu w czasie.
+
+        \[\vec{F} = \frac{d \vec{p}}{dt} = \frac{d (m \vec{v})}{dt} = m \frac{d\vec{v}}{dt} = m \vec{a}\]
     \end{definition}
+    \pagebreak
+    \subsection{\LARGE Zasady dynamiki Newtona}
+    \begin{definition} [Zasada 1 - \textbf{\em{Zasada bezwładności}}]
+        Jeśli na ciało nie działa żadna siła lub siły działające równoważą się $\left( \vec{F_{wyp}} = \bar{0} \right)$.
+        To ciało pozostaje w spoczynku lub porusza się ruchem \textbf{jednostajnym prostoliniowym}.
+        
+        Wynika  z niej zasada zachowania pędu:
+        \[\sum \vec{F} = \vec{F_{wyp}} = \bar{0} \quad \implies \quad \frac{d \vec{p}}{dt} = 0 \quad \implies \quad \vec{p} = \text{const}\]
+        \[\implies m\vec{a} = 0 \quad \implies \quad \vec{a} = 0\]
+    \end{definition}
+
     
 \end{document}
