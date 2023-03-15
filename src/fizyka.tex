@@ -478,7 +478,7 @@
         Jeśli na ciało nie działa żadna siła lub siły działające równoważą się $\left( \vec{F_{wyp}} = \bar{0} \right)$.
         To ciało pozostaje w spoczynku lub porusza się ruchem \textbf{jednostajnym prostoliniowym}.
         
-        Wynika  z niej zasada zachowania pędu:
+        Wynika  z niej \textbf{zasada zachowania pędu}:
         \begin{equation*}
             \sum \vec{F} = \vec{F_{wyp}} = \bar{0} \quad \implies
             \begin{cases}
@@ -522,6 +522,62 @@
     W ten sposób wyprowadziliśmy wzór na ogólniejszą postać drugiej zasady dynamiki. Warto 
     zauważyć, że gdy $m = \text{const}$ to $\frac{dm}{dt} = 0$ co sprowadza to równanie 
     do klasycznej wersji drugiej zasady dynamiki.
+    \subsubsection*{\Large Zderzenia}
+    Jednym z ważniejszych zastosowań \textbf{zasady zachowania pędu} jest wyliczanie zachowania 
+    ciał podczas zderzenia. Nie możemy zmierzyć ani ustalić sił w czasie samego zderzenia ale 
+    korzystając z \textbf{zasady zachowania pędu} i \textbf{zasady zachownia energii całkowitej}
+    jesteśmy w stanie policzyć zachowanie się ciała po zderzeniu.
+    Wyróżniamy rodzaje zderzeń:
+    \begin{itemize}
+        \item[--] \textbf{sprężyste (elastyczne)} - całkowicie zachowana zostaje energiia kinetyczna wukładu
+        \item[--] \textbf{niesprężyste (nielastyczne)} - działa tylko zasada zachowania pędu, część energii 
+        zostaje rozproszona
+        \item[--] \textbf{całkowice niesprężyste (nielastyczne)} - działa tylko zasada zachowania pędu ale po 
+        po zderzeniu oba ciała poruszają się \textbf{\em{"zlepione"}} w jedno, np. \em{pocisk trafił kulkę i w niej
+        utknął i nadał prędkość.}
+    \end{itemize}
+    Przykład obliczeń dla zderzenia \textbf{idealnie sprężystego} w przestrzeni 1D.
+    \begin{center}
+        \includegraphics{img/zderzenie.png}
+    \end{center}
+
+    Zapisujemy pęd i nergię każdego ciała przed zderzeniem i po zderzeniu:
+    \[p_1 = m_1v_1 \qquad p_2 = m_2v_2 \qquad p_1' = m_1u_1 \qquad p_2' = m_2u_2 \]
+    \[E_{k1} = \frac{m_1v_1^2}{2} \qquad E_{k2} = \frac{m_2v_2^2}{2} \qquad
+    E_{k1}' = \frac{m_1u_1^2}{2} \qquad E_{k2}' = \frac{m_2u_2^2}{2}\]
+    Z zasady zachowania pędu: 
+    \[p_c = p_c'\]
+    \[p_1 + p_2 = p_1' + p_2\]
+    \[m_1v_1 + m_2v_2 = m_1u_1 + m_2u_2\]
+    Z zasady zachowana energii:
+    \[E_c = E_c'\]
+    \[E_{k1} + E_{k2} = E_{k1}' + E_{k2}'\]
+    \[\frac{m_1v_1^2}{2} + \frac{m_2v_2^2}{2} = \frac{m_1u_1^2}{2} + \frac{m_2u_2^2}{2}\]
+    Zestawiając w układ równań:
+    \[
+        \begin{cases}
+            p_1 + p_2 = p_1' + p_2' \\
+            E_{k1} + E_{k2} = E_{k1}' + E_{k2}'
+        \end{cases}
+        \implies
+        \begin{cases}
+            m_1v_1 + m_2v_2 = m_1u_1 + m_2u_2 \\
+            \frac{m_1v_1^2}{2} + \frac{m_2v_2^2}{2} = \frac{m_1u_1^2}{2} + \frac{m_2u_2^2}{2}
+        \end{cases}
+    \]
+    Rozwiązując układ równań ze względu na $u_1$ i $u_2$ otrzymujemy:
+    \[u_1 = \left(\frac{m_1 - m_2}{m_1 + m_2}\right)v_1 + \left(\frac{2m_2}{m_1 + m_2}\right)v_2\]
+    \[u_2 = \left(\frac{2m_1}{m_1 + m_2}\right)v_1 + \left(\frac{m_2 - m_1}{m_1 + m_2}\right)v_2\]
+
+    Szczególne przypadki tych równań:
+    \begin{itemize}
+        \item[--] zderzenie identycznych ciał - $m_1 = m_2 = m \implies u_1 = v_1 \land u_2 = v_1$
+        \item[--] zderzenie lekkiego ciała z ciężkim nieruchomym - $m_1 \gg m_2 \land v_2 = 0 
+        \\ \implies u_1 = -v_1 \land u_2 = 0$
+        \item[--] zderzenie cięzkiego ciała z lekkim nieruchomym - $m_1 \ll m_2 \land v_2 = 0 
+        \\ \implies u_1 = v_1 \land u_2 = 2v_1$
+    \end{itemize}
+
     \pagebreak
     \subsection{\LARGE Zasady dynamiki dla ruchu obrotowego}
     Zasady dynamiki w powyższej formie są dobre dla ruchu postępowego, lecz nie zawsze dla
