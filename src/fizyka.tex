@@ -27,12 +27,12 @@
 
 \date{}
 
-\newenvironment{definition}[1][title]
+\newenvironment{definition}[2][Definicja]
     {
         \begin{center}
         \begin{tabular}{|p{1\textwidth}|}
         \hline
-            Definicja: #1\\[2ex]
+            #1: #2\\[2ex]
         \begin{em}
         \Large
     }
@@ -128,16 +128,16 @@
 \section{\huge Podstawy kinematyki}
     \subsection{\LARGE Podstawowe pojęcia}
         \Large
-        \begin{definition}[Ruch]
+        \begin{definition}{Ruch}
             Zmiana wzajemnego położenia ciał względem innych ciał wraz z upływem czasu.
         \end{definition}
-        \begin{definition}[Układ odniesienia]
+        \begin{definition}{Układ odniesienia}
             Wybrane ciało lub ciało względem których wyznaczamy własności fizyczne takie jak położenie czy prędkość.
         \end{definition}
-        \begin{definition}[Punkt materialny]
+        \begin{definition}{Punkt materialny}
             Punktem materialnym nazywamy obiekt obdarzony masą, których rozmiar (aka objętość) można zaniedbać.
         \end{definition}
-        \begin{definition}[Przemieszczenie]
+        \begin{definition}{Przemieszczenie}
             Zmiana położenia ciała względem jakiegoś układu odniesienia, zwykle punktu $(0,\ 0)$ w układzie współrzednych. 
             Wektor przemieszczenia oznaczamy $r$. Występuje poniższa zależność:
             \[\vec{r} = \hat{i}x + \hat{j}y + \hat{k}z = (x,\ y,\ z)\]
@@ -150,7 +150,7 @@
         \end{definition}
     \subsection{\LARGE Prędkość}
         \Large
-        \begin{definition}[Prędkość]
+        \begin{definition}{Prędkość}
             Prędkość to zmiana położenia w czasie:
             \[\vec{v} = \frac{x - x_0}{t - t_0} = \frac{\Delta\vec{r}}{\Delta t}\]
             gdzie:
@@ -163,7 +163,7 @@
             = \left (\frac{dx}{dt},\ \frac{dy}{dt},\ \frac{dz}{dt} \right )\]
             gdzie $x(t)$, $y(t)$, $z(t)$ to funkcje opisujące zmianę położenia względem każdej z osi.
         \end{definition}
-        \begin{definition}[Szybkość]
+        \begin{definition}{Szybkość}
             Wielkość skalarna. Wartość wektora prędkości w danej chwili $t$. Czasami równa prędkości średniej.
         \end{definition}
         Jeśli ciało znajdowało się w chwili $t_0$ w punkcie $x_0$, a w chwili $t$ w punkcie $x$ to:
@@ -186,7 +186,7 @@
         Należy pamiętać o stałej całkowania $\bold{C}$, interpretowanej zwykle jako $x_0$ - położenie początkowe. W większości
         wypadków stałą będziemy wyliczali z warunków początkowych zadania, np. $\mathit{x(0) = 0}$. 
 
-        \begin{definition}[Prędkość średnia]
+        \begin{definition}{Prędkość średnia}
             Oszacowana wartość prędkości na danym odcinku. Oznaczana $\bar{v}$. Prędkość średnią wyznaczamy poprzez wzór:
             \[\bar{v} = \frac{S_c}{t_c}\]
             gdzie:
@@ -204,7 +204,7 @@
     \pagebreak
     \subsection{\LARGE Przyspieszenie}
         \Large
-        \begin{definition}[Przyspieszenie]
+        \begin{definition}{Przyspieszenie}
             Przyspieszenie to wielkość opisująca jak zmienia się prędkość ciała w czasie:
             \[\vec{a} = \frac{\vec{v} - \vec{v_0}}{t - t_0} = \frac{\Delta\vec{v}}{\Delta t}\]
             gdzie:
@@ -231,7 +231,7 @@
     \pagebreak
     \subsection{\LARGE Ruch jednostajnie przyspieszony}
         \Large
-        \begin{definition}[Ruch jednostajnie przyspieszony]
+        \begin{definition}{Ruch jednostajnie przyspieszony}
             Ruch w którym wektor przyspieszenia jest stały:
             \[\vec{a} = \text{const}\] 
         \end{definition}
@@ -323,7 +323,7 @@
     \implies z = \frac{2v_0^2\sin(2\alpha)}{g}\]
 
     \subsection{\LARGE Ruch po okręgu}
-    \begin{definition}[Ruch po okręgu]
+    \begin{definition}{Ruch po okręgu}
         Ruch w którym tor ruchu jest okrąg. Wektor prędkości $v_s$ jest stycznyczny do okręgu. 
         Występuje przyspieszenie radialne/normalne prostopadłe do wektora prędkości - oznaczamy $a_r$ 
         - gdy mówimy dokładnie o okręgu przyspieszenie to można nazwać przyspieszeniem dośrodkowym, lecz nazwać
@@ -380,19 +380,19 @@
     \begin{center}
         \includegraphics{img/ruchokrag2.png}
     \end{center}
-    \begin{definition}[Droga kątowa]
+    \begin{definition}{Droga kątowa}
         Jest to kąt jaki zatoczyło ciało. Jest to iloraz długości łuku przebytego przez ciało i 
         promienia wodzącego. Wyrażamy w radianach.
         \[\varphi = \frac{s(t)}{R}\]
     \end{definition}
-    \begin{definition}[Prędkość kątowa]
+    \begin{definition}{Prędkość kątowa}
         Jest to szybkość zmiany "kąta zatoczonego przez ciało". Analogicznie do zwykłej prędkości jest to 
         iloraz drogi kątowej przebytej w czasie. Jednostka: $\frac{1}{s}$
         \[\omega = \frac{d\varphi}{dt} = \frac{d}{dt} \frac{s(t)}{R} = \frac{v}{R}\]
         Gdy prędkość styczna jest stała, szybkość kontowa wyraża się następująco:
         \[\omega = \frac{2\pi}{T}\]
     \end{definition}
-    \begin{definition}[Przyspieszenie kątowa]
+    \begin{definition}{Przyspieszenie kątowa}
         Opisuje jak zmienia się prędkość kątowa w czasie. Analogicznie do przyspieszenia w ruchu
         postępowym(zwykłym) jest to pochodna z prędkości kątowej. Jednostka $\frac{1}{s^2}$
         \[\alpha = \frac{d \omega}{dt} = \frac{d}{dt}\frac{v}{R} = \frac{a}{R} \]
@@ -442,7 +442,7 @@
         \item [--] \textbf{oddziaływania jądrowe silne} - działa na małą odległości i dotyczy cząstek jądrowych
     \end{itemize}
     
-    \begin{definition}[Masa]
+    \begin{definition}{Masa}
         Najprostszą definicją masy jest \textbf{ilość materii zawartej w ciele}. Jest to jedna z 
         pierwszych definicji masy.
         
@@ -463,31 +463,134 @@
     \[ mv = m_0v_0\]
     \[ m = m_0 \frac{v_0}{v}\]
 
-    \begin{definition}[Pęd]
+    \begin{definition}{Pęd}
         Pęd to iloczyn masy i prędkości. 
         \[\vec{p} = m\vec{v}\]
     \end{definition} 
 
-    \begin{definition}[Siła]
+    \begin{definition}{Siła}
         Siłę definiujemy jako zmianę pędu w czasie.
 
         \[\vec{F} = \frac{d \vec{p}}{dt} = \frac{d (m \vec{v})}{dt} = m \frac{d\vec{v}}{dt} = m \vec{a}\]
     \end{definition}
-    \pagebreak
     \subsection{\LARGE Zasady dynamiki Newtona}
-    \begin{definition} [Zasada 1 - \textbf{\em{Zasada bezwładności}}]
+    \begin{definition}{Pierwsza zasada dynamiki - \textbf{\em{Zasada bezwładności}}}
         Jeśli na ciało nie działa żadna siła lub siły działające równoważą się $\left( \vec{F_{wyp}} = \bar{0} \right)$.
         To ciało pozostaje w spoczynku lub porusza się ruchem \textbf{jednostajnym prostoliniowym}.
         
         Wynika  z niej zasada zachowania pędu:
-        \begin{equation}
+        \begin{equation*}
             \sum \vec{F} = \vec{F_{wyp}} = \bar{0} \quad \implies
             \begin{cases}
                 \frac{d \vec{p}}{dt} = 0 \quad \implies \quad \vec{p} = \text{const}\\
                 \implies m\vec{a} = 0 \quad \implies \quad \vec{a} = 0
             \end{cases}
-        \end{equation}
+        \end{equation*}
+
     \end{definition}
 
+    \begin{definition}{Druga zasada dyanmiki}
+        Druga zasada dynamiki wiąże siłę wypadkową sił działających na ciało z przyspieszeniem
+        z jakim się porusza.
+        \[\sum \vec{F} = \vec{F_{wyp}} = m\vec{a} = m\frac{d\vec{v}}{dt}\]
+        gdzie:
+        \begin{itemize}
+            \item[--] $m$ - masa ciała, $m = \text{const}$
+            \item[--] $\vec{a}$ - wektor przyspieszenia ciała
+        \end{itemize}
+        Lub podstawiając $d\vec{p} = m\ d\vec{v}$ możemy wyrazić ją w postaci pędowej:
+        \[\vec{F_{wyp}} = \frac{d\vec{p}}{dt}\]
+    \end{definition}
+
+    \begin{definition}{Trzecia zasada dyanmiki - \textbf{\em{Zasada kontrakcji}}}
+        Gdy na ciało A oddziałuje na ciało B z siłą $F_{A \rightarrow B}$, to ciało B 
+        oddziałuje na ciało A siłą $F_{B \rightarrow A}$ o tej samej wartości i kierunku lecz
+        przeciwnym zwrocie.
+        \[F_{A \rightarrow B} = -F_{B \rightarrow A}\]
+    \end{definition}
+
+    \subsubsection*{\Large Druga zasada dynamiki dla układu o zmiennej masie}
+    Ogólna postać drugiej zasady dynamiki podana powyżej odnosi się tylko do układów
+    w których masa pozostaje stała wraz z upływem czasu. Aby wyprowadzić wzór na drugą zasadę 
+    dynamiki dla układów o zmiennej masie korzystamy z postaci pędowej drugiej zasady dynamiki.
+    \[\vec{F_{wyp}} = \frac{d\vec{p}}{dt}\]
+    Wektor pędu możemy wyrazić jako $\vec{p}(t) = m(t)\vec{v}(t)$. Podstawiając:
+    \[\vec{F_{wyp}} = \frac{d(m\vec{v})}{dt}\]
+    Jako, że zarówno masa jak i prędkość są funkcjami czasu to korzystamy z pochodnej iloczynu
+    funkcji.
+    \[\vec{F_{wyp}} = m\frac{d\vec{v}}{dt} + \vec{v}\frac{dm}{dt}\]
+    W ten sposób wyprowadziliśmy wzór na ogólniejszą postać drugiej zasady dynamiki. Warto 
+    zauważyć, że gdy $m = \text{const}$ to $\frac{dm}{dt} = 0$ co sprowadza to równanie 
+    do klasycznej wersji drugiej zasady dynamiki.
+    \pagebreak
+    \subsection{\LARGE Zasady dynamiki dla ruchu obrotowego}
+    Zasady dynamiki w powyższej formie są dobre dla ruchu postępowego, lecz nie zawsze dla
+    ruchu obrotowego. Możemy wprawić ciało w ruchu nawet w sytuacji gdy $F_{wyp} = 0$.
+    Aby lepiej opisać ruch obrotowy względem jakiegoś punktu musimy zdefiniować
+    nowe wielkości.
+    \begin{definition}{Moment pędu}
+        Odpowiednik pędu w ruchu obrotowym. Oznaczmy $\vec{L}$. Wyrażamy go w $\frac{\text{kg}m^2}{s}$. Definiujemy go jako:
+        \[\vec{L} = \vec{r} \times \vec{p}\]
+        gdzie:
+        \begin{itemize}
+            \item[--] $\vec{L}$ - wektor momentu pędu prostopadły do płaszczyzny obrotu
+            \item[--] $\vec{r}$ - wektor położenia względem osi obrotu
+            \item[--] $\vec{p}$ - wektor pędu styczny do ruchu obrotowego 
+        \end{itemize}
+        Zwrot $\vec{L}$ możemy wyznaczyć korzystając z zasady prawej ręki. Skalarnie zapisany wzór
+        ma następującą postać:
+        \[L = rp\sin(\vec{r},\ \vec{p})\]
+        \begin{center}
+            \includegraphics[width=4cm]{img/momentsily.png}
+        \end{center}   
+    \end{definition}
+
+    \begin{definition}{Moment siły}
+        Odpowiednik sły w ruchu obrotowym. Oznaczamy poprzez literkę $\vec{M}$ lub $\vec{\tau}$.
+        Wyrażamy go w $Nm$. Analogicznie do pędowej postaci drugiej zasady dynamiki moment siły możemy
+        wyrazić jako iloraz zmiany momentu pędu i czasu w którym zaszła.
+        \[\vec{\tau} = \frac{d\vec{L}}{dt}\]
+        gdzie:
+        \begin{itemize}
+            \item[--] $\vec{\tau_{wyp}}$ - moment siły prostopadły do płaszczyzny obrotu
+            \item[--] $\vec{L}$ - wektor momentu pędu prostopadły do płaszczyzny obrotu
+        \end{itemize}
+        Zwrot $\vec{\tau}$ możemy wyznaczyć korzystając z zasady prawej ręki na podstawie kierunku działania
+        siły stycznej. Z powyższego wzoru wynika zależność wektorowa:
+        \[\vec{\tau} = \vec{r} \times \vec{F_{wyp}}\]
+        a skalarnie:
+        \[\tau = rF_{wyp}\sin(\vec{r},\ \vec{F_{wyp}})\]
+    \end{definition}
+    Aby wyprowadzić wektorową zależność z powyższej definicji wystarczy podstawić zależność na moment pędu.
+    \[\vec{L} = \vec{r} \times \vec{p}\]
+    \[\vec{\tau} = \frac{d\vec{L}}{dt} = \frac{d}{dt}\left( \vec{r} \times \vec{p} \right)\]
+    Teraz możemy skorzystać z pochodnej iloczynu funkcji (dla ludzi małej wiary 
+    \url{https://en.wikipedia.org/wiki/Cross_product#Differentiation}):
+    \[\vec{\tau} = \frac{d}{dt}\left( \vec{r} \times \vec{p} \right) = 
+    \frac{d\vec{r}}{dt}\times\vec{p} + \vec{r} \times \frac{d\vec{p}}{dt}\]
+    Teraz łatwo zauważyć, że pozostałe pochodne możemy podmienić bo:
+
+    \[\begin{cases}
+        \vec{v} = \frac{d\vec{r}}{dt} \\
+        \vec{F_{wyp}} = \frac{d\vec{p}}{dt}
+    \end{cases} \qquad\implies\qquad \vec{\tau} = \vec{v} \times \vec{p} + \vec{r}\times\vec{F_{wyp}}\]
+
+    Teraz wystarczy zauważyć, że: 
+    \[\vec{p} = m\vec{v} \quad\implies\quad \vec{v} \parallel \vec{p} \quad\implies\quad 
+    \vec{v} \times \vec{p} = \bar{0}\]
+    A więc równanie na moment siły się upraszcza do postaci z definicji:
+    \[\vec{\tau} = \vec{r}\times\vec{F_{wyp}}\]
+    Podobnie jak z drugiej zasady dynamiki możemy wyciągnąć wnioski o równowadze momentów pędu.
+    \[\vec{\tau_{wyp}} = \bar{0} \quad\implies\quad \frac{d\vec{L}}{dt} \quad\implies\quad \vec{L} 
+    = \text{const}\]
+    Wniosek ten nazywamy \textbf{zasadą zachowania momentu pędu}.
+
+    \begin{definition}[Wniosek]{Zasady dynamiki}
+        \textbf{Aby ciało było w równowadzę suma sił zewnętrznych i momentów sił zewnętrznych
+        musi być równa zero.}
+        \[\vec{a} = \bar{0} \quad\land\quad \alpha = 0 \qquad\iff\qquad 
+        \sum \vec{F} = \vec{F_{wyp} = \bar{0}} 
+        \quad\land\quad \sum \vec{\tau} = \vec{\tau_{wyp}} = \bar{0} \]
+    \end{definition}
     
 \end{document}
