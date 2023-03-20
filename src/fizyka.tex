@@ -648,5 +648,53 @@
         \sum \vec{F} = \vec{F_{wyp}} = \bar{0}
         \quad\land\quad \sum \vec{\tau} = \vec{\tau_{wyp}} = \bar{0} \]
     \end{definition}
+
+    \subsection{\LARGE Tarcie}
+    \begin{definition}{Tarcie statyczne}
+        Tarcie statycze to siła działająca na styku dwóch ciał. Wynika z \textbf{3 zasady dynamiki
+        Newtona}. Działa gdy działamy siłą na ciało i próbujemy je poruszyć ale jeszcze się nie poruszymy.
+        
+        \textbf{Szczególny przypadek to pojazd toczący się na kołach bez poślizgu - na styku koła i powierzchni ruchu $v_w = 0$, więc działa tarcie
+        statyczne.} 
+
+        Maksymalną siłę tarcia statyczne $T_s$ możemy zdefiniować następująco:
+        \[T_s = F_N{\mu_s}\]
+        gdzie:
+        \begin{itemize}
+            \item[--] $F_N$ - siła nacisku
+            \item[--] $\mu_s$ - współczynnik tarcia statycznego
+        \end{itemize}
+    \end{definition}
+    \subsubsection*{Wyznaczanie współczynnika tarcia statycznego}
+    Zdefiniowany powyżej wzór na tarcie statyczne definiuje minimalną siłę potrzebną na 
+    wpawienie ciała w ruch. Nie jesteśmy w stanie w ładny sposób określić siły tarcia statycznego w 
+    każdym momencie.
+    Jednym ze sposobów wyznaczenia współczynnika tarcia statycznego jest umieszczenia ciała o masie $m$ 
+    na równi pochyłej ze zmiennym kątem nachylenia $\theta$. Oznaczam:
+    \begin{itemize}
+        \item[--] $Q$ - siła ciężkości działająca na ciało
+        \item[--] $Q_x$ - składowa siły ciężkości równoległa do powierzchni równi
+        \item[--] $Q_y$ - składowa siły ciężkości prostopadła do powierzchni równi
+        \item[--] $T$ - wartość siły tarcia
+        \item[--] $R$ - siła reakcji do siły nacisku na równię
+    \end{itemize}
+    \begin{center}
+        \includegraphics{img/rownia.png}
+    \end{center}
+    Teraz musimy zauważyć, że dopóki:
+    \[T \neq T_{max} = F_N\mu_s\]
+    ciało pozostanie w spoczynku, więc zachodzi równowść:
+    \[T = Q_x\]
+    \[T(\theta) = mg\sin \theta\]
+    Jeśli oznaczymy minimalny kąt nachylenia przy którym cialo zaczyna się zsuwać jako
+    $\theta_{max}$ (max bo jest to też największy możliwy kąt przy którym ciało nie będzie się zsuwać
+    bo wszystkie siły się równoważą), to otrzymujemy zależność:
+    \[T = Q_x = T_{max} = F_N\mu_s = Q_y\mu_s\]
+    \[Q_y\mu_s = mg\sin \theta_{max}\] 
+    \[mg\cos\theta_{max}\mu_s = mg\sin \theta_{max}\] 
+    \[\mu_s = \frac{\sin \theta_{max}}{\cos \theta_{max}} = \tan{\theta_{max}}\] 
+    \begin{definition}{Tarcie kinetyczne}
+
+    \end{definition}
     
 \end{document}
