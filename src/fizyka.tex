@@ -664,6 +664,10 @@
             \item[--] $F_N$ - siła nacisku
             \item[--] $\mu_s$ - współczynnik tarcia statycznego
         \end{itemize}
+
+        \textbf{$T_s$ nie zależy w przybliżeniu od powierzcni styku ciał}
+
+        \textbf{$T_s$ jest proporcjonalna do siły nacisku na podłoże}
     \end{definition}
     \subsubsection*{Wyznaczanie współczynnika tarcia statycznego}
     Zdefiniowany powyżej wzór na tarcie statyczne definiuje minimalną siłę potrzebną na 
@@ -694,7 +698,26 @@
     \[mg\cos\theta_{max}\mu_s = mg\sin \theta_{max}\] 
     \[\mu_s = \frac{\sin \theta_{max}}{\cos \theta_{max}} = \tan{\theta_{max}}\] 
     \begin{definition}{Tarcie kinetyczne}
+        Jest to siła działająca na styku ciał gdy ciała poruszają się względem siebie. Siłę 
+        tarcia kinetycznego $T_k$ można zdefiniować następująco:
+        \[T_k = F_N\mu_k\]
+        gdzie:
+        \begin{itemize}
+            \item[--] $F_N$ - siła nacisku ciała na powierzchnię
+            \item[--] $\mu_k$ - współczynnik tarcia kinetycznego 
+        \end{itemize}
 
+        \textbf{W przybliżeniu siła tarcia kinetycznego nie zależy od prędkości ruchu.}
     \end{definition}
+    Jedną z ważniejszych własności tarcia jest to, że dla większości materiałów:
+    \[\mu_k \leq \mu_s\]
+    Objawia się to tym, że w istocie siła potrzebna do poruszenia ciała jest większa niż 
+    siła tarcia działająca na ciało gdy już zacznie się poruszać.
+    \begin{center}
+        \includegraphics{img/tarcie.png}
+    \end{center}
+    Na powyższym wykresie widać zależność, że gdy siła którą działamy na ciało zrówna się 
+    z maksymalną siłą tarcia statycznego ciało zaczyna się poruszać i występuje tarcie kinetyczne
+    o mniejszej sile.
     
 \end{document}
