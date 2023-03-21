@@ -126,7 +126,13 @@
         \end{center}
     \subsection{\LARGE Wersory}
         \Large
-        Wersor to inaczej
+        Wersor to inaczej wektor jednostkowy, czyli wektor o długości dokładnie $1$. Jest to 
+        iloraz wektora oraz jego długości\\ 
+        Niech:
+        \[\vec{a} := (a_1, a_2, a_3)\]
+        Wtedy wersor $\hat{a}$ wektora $\vec{a}$ definiujemy w następujący sposób:
+        \[\hat{a} = \frac{\vec{a}}{||\vec{a}||} = \frac{(a_1, a_2, a_3)}{\sqrt{a_1^2 + a_2^2 + a_3^2}}\]
+    \pagebreak
         
 \section{\huge Podstawy kinematyki}
     \subsection{\LARGE Podstawowe pojęcia}
@@ -136,9 +142,6 @@
         \end{definition}
         \begin{definition}{Układ odniesienia}
             Wybrane ciało lub ciało względem których wyznaczamy własności fizyczne takie jak położenie czy prędkość.
-        \end{definition}
-        \begin{definition}{Punkt materialny}
-            Punktem materialnym nazywamy obiekt obdarzony masą, których rozmiar (aka objętość) można zaniedbać.
         \end{definition}
         \begin{definition}{Przemieszczenie}
             Zmiana położenia ciała względem jakiegoś układu odniesienia, zwykle punktu $(0,\ 0)$ w układzie współrzednych. 
@@ -150,6 +153,9 @@
                 \item[--] y - współrzędna $y$ wektora przemieszczenia
                 \item[--] z - współrzędna $z$ wektora przemieszczenia
             \end{itemize}
+        \end{definition}
+        \begin{definition}{Punkt materialny}
+            Punktem materialnym nazywamy obiekt obdarzony masą, których rozmiar (aka objętość) można zaniedbać.
         \end{definition}
     \subsection{\LARGE Prędkość}
         \Large
@@ -545,7 +551,7 @@
         \includegraphics{img/zderzenie.png}
     \end{center}
 
-    Zapisujemy pęd i nergię każdego ciała przed zderzeniem i po zderzeniu:
+    Zapisujemy pęd i energię każdego ciała przed zderzeniem i po zderzeniu:
     \[p_1 = m_1v_1 \qquad p_2 = m_2v_2 \qquad p_1' = m_1u_1 \qquad p_2' = m_2u_2 \]
     \[E_{k1} = \frac{m_1v_1^2}{2} \qquad E_{k2} = \frac{m_2v_2^2}{2} \qquad
     E_{k1}' = \frac{m_1u_1^2}{2} \qquad E_{k2}' = \frac{m_2u_2^2}{2}\]
@@ -748,7 +754,7 @@
     \end{center}
 
     Pierwszy obserwatory (w układzie $x(y)$) jest obserwatorem inercjalnym i pozostaje w spoczynku. 
-    Drugi obserwator (układ $x'(y')$) poruszający się względem pierwszego wzdłuż osi $OX$.
+    Drugi obserwator (układ $x'(y')$) porusza się względem pierwszego wzdłuż osi $OX$.
     Niech:
     \begin{itemize}
         \item [--] $x(t)$ - położenie ciała względem \textbf{pierwszego} obserwatora w chwili $t$
@@ -758,7 +764,7 @@
     Możemy zapisać równanie:
     \[x(t) = x'(t) + x_0(t)\]
     \[x'(t) = x(t) - x_0(t)\]
-    Liczymy drugą pochodną aby uzyskać równanie wiążące przyspieszenie:
+    Liczymy drugą pochodną, aby uzyskać równanie wiążące przyspieszenie:
     \[\frac{d^2}{dt^2}x'(t) = \frac{d^2}{dt^2}x(t) - \frac{d^2}{dt^2}x_0(t)\]
     \[a' = a - a_0\]
     gdzie:
@@ -777,7 +783,7 @@
     \[ma' = ma - ma_0\]
     \[ma' = F - ma_0\]
     
-    Możemy zauważyć, że w \textbf{nieinercjalnym układzie odniesienia nie działają zasady dynamiki Newtona} bo gdy:
+    Możemy zauważyć, że w \textbf{nieinercjalnym układzie odniesienia nie działają zasady dynamiki Newtona}, bo gdy:
     \begin{itemize}
         \item[--] $F = 0$ - ciało nie pozostaje w spoczynku ani nie porusza się ruchem jednostajnym, 
         tylko z przyspieszeniem o wartości $-a_0$
@@ -797,7 +803,7 @@
     \subsubsection*{\Large Przykład w ruchu po okręgu}
     Rozważmy sytuację gdy siedzimy w aucie pokonującym zakręt. Poruszamy się z przyspieszeniem dośrodkowym:
     \[a_d = a_n = \frac{v^2}{R}\]
-    Skoro rozważamy układ w którym obserwujemy ruch w środku samochodu poruszającego się z przyspieszeniem
+    Skoro rozważamy układ w którym obserwujemy ruch w środku samochodu poruszającego się z przyspieszeniem,
     to rozważamy układ nieinercjalny. Naszym przyspieszeniem unoszenia będzie przyspieszenie dośrodkowe:
     \[a_0 = a_d = \frac{v^2}{R}\]
     Z tego wniosek, że działa na nas pozorna siła bezwładności:
@@ -805,6 +811,79 @@
     \[F_b = -ma_0 = -m\frac{v^2}{R} = F_{\text{odśr}}\] 
     Z tego wniosek, że siła bezwładności jest siłą "wyrzucającą" nas z zakrętu, przeciwną do przyspieszenia
     dośrodkowego. Nazwyamy ją \textbf{\em{siłą odśrodkową}}.
+
+    \subsection{\LARGE Siła Coriolisa}
+    Rozważmy ciało poruszające się od środka tarczy obracającej się tarczy do jej zewnętrza. 
+    Oznaczam:
+    \begin{itemize}
+        \item [--] $v_r$ - prędkość z którą ciało oddala się od środka tarczy ($\vec{v_r} \parallel \vec{r}$)
+        \item [--] $v_s$ - prędkość styczna w punkcie $A$ z jaką porusza się ciało (wynika z obrotu tarczy) ($\vec{v_s} \perp \vec{v_r}$)
+        \item [--] $v_s'$ - prędkość styczna w punkcie $A'$
+        \item [--] $\Delta v$ - zmiana prędkości między punktami 
+        \item [--] $r$ - odległość od środka okręgu
+        \item [--] $\Delta r$ - zmiana odległości od środka okręgu między punktem $A$ i $A'$
+        \item [--] $\Delta \theta$ - droga kątowa jaką przebyło ciało między punkami $A$ i $A'$
+        \item [--] $\Delta t$ - czas w którym ciało przemieściło się między punktami $A$ i $A'$
+        \item [--] $\omega$ - szybkość kątowa z jaką obraca się tarcza
+    \end{itemize}
+    Na rysunku poniżej oznaczono punkt $A$ i $A'$ między którymi ciało przemieściło się w czasie
+    $\Delta t$. 
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{img/coriolis.png}
+    \end{center}
+    Aby wyprowadzić wzór na siłę Coriolisa zacznijmy od wyznaczenia składowej przyspieszenia
+    wynikającej z oddalania się od okręgu $a_r$ - wynika ona ze zmiany kierunku prędkości $v_r$, 
+    następnie musimy policzyć $a_s$ - przyspieszenie wynikające ze zmiany prędkości stycznej spowodowanej
+    zmianą odlegością od środka tarczy. 
+
+    \noindent Zapiszmy zmianę prędkości $v_r$ jako $\Delta v_r$ (na rysunku (b) $\Delta v$).
+    Nie zmienia ona swojej wartości lecz zmienia kierunek. Wystarczy skorzystać z twierdzenia
+    cosinusów i tw. o małych kątach (finalnie będziemy liczyć pochodną więc kąt w istocie będzie
+    mały).
+
+    \noindent Zaczynamy od twierdzenia cosinusów:
+    \[(\Delta v_r)^2 = v_r^2 + v_r^2 - 2v_rv_r\cos(\Delta \theta) = 2v_r^2 - 2v_r^2\cos(\Delta \theta)
+    = 2v_r^2(1 - cos(\Delta \theta))\]
+    \[\Delta v_r = v_r\sqrt{2-2\cos(\Delta\theta)} = v_r\sqrt{4\sin^2\left(\frac{\Delta\theta}{2}\right)} = 2v_r\sin\left(\frac{\Delta\theta}{2}\right)\]
+    Teraz możemy skorzystać z tw. o małych kątach:
+    \[\Delta v_r \approx 2v_r\frac{\Delta \theta}{2} = v_r\Delta\theta \]
+    Następnie dzielimy obustronnie przez $\Delta t$ i przechodzimy do pochodnej:
+    \[\frac{\Delta v_r}{\Delta t} = v_r \frac{\Delta\theta}{\Delta t} \qquad\xrightarrow[\Delta t\to 0]{} 
+    \qquad \frac{dv_r}{dt} = v_r\frac{d\theta}{dt}\]
+    Teraz możemy zapisać końcową zależność na $a_r$:
+    \[a_r = v_r\omega\]
+    To przyspieszenie ma kierunek równoległy do prędkości stycznej - bo zmiana kierunku prędkości $v_r$
+    ma kierunek równoległy do prędkości stycznej.\\
+
+    \noindent Aby policzyć $a_s$ będziemy postępować analogicznie jak powyżej tzn. wyznaczymy zmianę
+    prędkości stycznej $\Delta v_s$ i policzymy pochodną.
+    Aby wyznaczyć $\Delta v_s$ oznaczmy $v_s$ jako prędkość styczną w punkcie $A$, a $v_s'$ jako
+    prędkość styczną w punkcie $A'$.
+    \[\Delta v_s = v_s' - v_s\]
+    Korzystając ze wzorów łączących prędkość kątową i prędkość styczną otrzymujemy:
+    \[
+        \begin{cases}
+            v_s = \omega r \\
+            v_s' = \omega (r + \Delta r)
+        \end{cases} \quad \implies \qquad \Delta v_s = \omega (r + \Delta r) - \omega r\]
+    Co daje:
+    \[\Delta v_s = \omega \Delta r\]
+    Analogicznie jak poprzednio dzielimy przez $\Delta t$ i obliczamy przechodzimy do pochodnej:
+    \[\frac{\Delta v_s}{\Delta t} = \omega \frac{\Delta r}{\Delta t} \qquad\xrightarrow[\Delta t\to 0]{} 
+    \qquad \frac{dv_s}{dt} = \omega\frac{dr}{dt}\]
+    Co daje końcową zależność w następującej postaci:
+    \[a_s = \omega v_r\]
+
+    \noindent Skoro oba przyspieszenia są w tym samym kierunku i mają tą samą wartość to możemy
+    oba przyspieszenia dodać aby otrzymać całkowite przyspieszenie - \textbf{\em{przyspieszenie Coriolisa}}.
+    \[a_c = a_s + a_r = 2\omega v_r\]
+
+    
+
+
+
+
+
 
 
 
