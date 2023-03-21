@@ -378,8 +378,8 @@
     \[v = \frac{l}{T} = \frac{2\pi r}{T} \]
     Korzystając z tego wzoru możemy wyrazić przyspieszenie dośrodkowe:
     \[a_r = \frac{v^2}{r} = \frac{\left (\frac{2\pi r}{T} \right )^2}{r} = \frac{4\pi^2 r}{T^2}\]
-    Przy ruchu po okręgu/ruchu obrotowym pojawiają się wielkości skalarne opisujące stricte obrót. 
-    Są to wielkości \textbf{skalarne}. Na potrzeby przyjmę następujące oznaczenia:
+    Przy ruchu po okręgu/ruchu obrotowym pojawiają się wielkości opisujące stricte obrót. 
+    Na potrzeby przyjmę następujące oznaczenia:
     \begin{itemize}
         \item [--] $s$ - długość łuku jakie zatoczyło ciało
         \item [--] $x$ i $y$ - pozycja ciała względem osi układu współrzędnych
@@ -394,15 +394,16 @@
         promienia wodzącego. Wyrażamy w radianach.
         \[\varphi = \frac{s(t)}{R}\]
     \end{definition}
-    \begin{definition}{Prędkość kątowa}
+    \begin{definition}{Szybkość kątowa}
         Jest to szybkość zmiany "kąta zatoczonego przez ciało". Analogicznie do zwykłej prędkości jest to 
         iloraz drogi kątowej przebytej w czasie. Jednostka: $\frac{1}{s}$
         \[\omega = \frac{d\varphi}{dt} = \frac{d}{dt} \frac{s(t)}{R} = \frac{v}{R}\]
-        Gdy prędkość styczna jest stała, szybkość kontowa wyraża się następująco:
+        Gdy prędkość styczna jest stała, szybkość kątowa wyraża się następująco:
         \[\omega = \frac{2\pi}{T}\]
+
     \end{definition}
     \begin{definition}{Przyspieszenie kątowa}
-        Opisuje jak zmienia się prędkość kątowa w czasie. Analogicznie do przyspieszenia w ruchu
+        Opisuje jak zmienia się szybkość kątowa w czasie. Analogicznie do przyspieszenia w ruchu
         postępowym(zwykłym) jest to pochodna z prędkości kątowej. Jednostka $\frac{1}{s^2}$
         \[\alpha = \frac{d \omega}{dt} = \frac{d}{dt}\frac{v}{R} = \frac{a}{R} \]
     \end{definition}
@@ -434,10 +435,11 @@
     \begin{center}
         \includegraphics{img/ruchokrag3.png}
     \end{center}
-    Na powyższym rysunku zaznaczono też "wektory" prędkości kątowej $\omega$ i przyspieszenia kątowego $\alpha$
-    lecz wciąż należy pamiętać, że nie są to właściwe wektory, a raczej zwyczajowe oznaczenie na rysunku 
-    w którą stronę się obracamy (z zasady prawej dłoni na podstawie wektora prędkości stycznej). 
-    \textbf{Są to wielkości skalarne}. 
+    Na powyższym rysunku zaznaczono też wektory szybkości kątowej $\omega$ i przyspieszenia kątowego $\alpha$. Można
+    się spotkać z określeniem, że są to pseudowektory - faktycznie można opisać te wielkości przy pomocy wersorów, np:
+    \[\vec{\omega} = \frac{v}{r}\frac{\vec{v} \times \vec{r}}{||\vec{v} \times \vec{r}||} = 
+    \frac{v}{r}\frac{\vec{v} \times \vec{r}}{vr\sin{\frac{\pi}{2}}} = \frac{\vec{v} \times \vec{r}}{r^2}\]
+
     \pagebreak
     
     \section{\huge Dynamika}
@@ -877,8 +879,21 @@
     \noindent Skoro oba przyspieszenia są w tym samym kierunku i mają tą samą wartość to możemy
     oba przyspieszenia dodać aby otrzymać całkowite przyspieszenie - \textbf{\em{przyspieszenie Coriolisa}}.
     \[a_c = a_s + a_r = 2\omega v_r\]
-
-    
+    Teraz możemy przejść ogólnie na wektory:
+    \[\vec{a_c} = a_c\hat{v_s}\]
+    Korzystając z tego, że:
+    \[\vec{v_r} \times \vec{\omega} \quad\parallel\quad \hat{v_s}\]
+    gdzie:
+    \[\vec{\omega} = \frac{v_s}{r}\frac{\vec{v_s} \times \vec{r}}{||\vec{v_s} \times \vec{r}||} = 
+    \frac{v_s}{r}\frac{\vec{v_s} \times \vec{r}}{v_sr\sin{\frac{\pi}{2}}} = \frac{\vec{v_s} \times \vec{r}}{r^2}\]
+    Możemy zapisać iloczyn wektorowy $\vec{v_r} \times \vec{\omega}$ w postaci wersora:
+    \[\vec{a_c} = 2v_r\omega\frac{\vec{v_r} \times \vec{\omega}}{v_r\omega\sin\left(\vec{v_r},\ \vec{\omega}\right)}\]
+    Wiemy, że $\vec{v_r} \perp \vec{\omega} \quad\implies\quad \sin\left(\vec{v_r},\ \vec{\omega}\right) = 1$,
+    z tego wynika, że:
+    \[\vec{a_c} = 2\vec{v_r} \times \vec{\omega}\]
+    Korzystając ze wzoru na siłę bezwładności - poruszliśmy się w układzie inercjalnym - w końcu możemy zapisać wzór na siłę Coriolisa (znak minus uwzględnia 
+    iloczyn wektorowy):
+    \[F_c = 2m\vec{v_r} \times \vec{\omega}\]
 
 
 
