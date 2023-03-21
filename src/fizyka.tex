@@ -124,6 +124,9 @@
         \begin{center}
             \includegraphics[width=10cm]{img/prawareka.png} 
         \end{center}
+    \subsection{\LARGE Wersory}
+        \Large
+        Wersor to inaczej
         
 \section{\huge Podstawy kinematyki}
     \subsection{\LARGE Podstawowe pojęcia}
@@ -433,6 +436,7 @@
     
     \section{\huge Dynamika}
     \subsection{\LARGE Wstęp}
+    \Large
     Dynamika to dział zajmujący się opisywaniem przyczyn ruchu. Istnieją 4 podstawowe oddziaływania z 
     których wynikają wszystkie inne siły:
     \begin{itemize}
@@ -650,6 +654,7 @@
     \end{definition}
 
     \subsection{\LARGE Tarcie}
+    \Large
     \begin{definition}{Tarcie statyczne}
         Tarcie statycze to siła działająca na styku dwóch ciał. Wynika z \textbf{3 zasady dynamiki
         Newtona}. Działa gdy działamy siłą na ciało i próbujemy je poruszyć ale jeszcze się nie poruszymy.
@@ -721,8 +726,87 @@
     o mniejszej sile.
     
     \subsection{\LARGE Układy inercjalne i nieinercjalne}
+    \Large
     \begin{definition}{Układ inercjalny}
-        Jest to układ
+        Jest to układ odniesienia definiowany przez pierwszą zasadę dynamiki. My jako obserwatorzy
+        pozostajemy w spoczynku lub poruszamy się ruchem jednostajnym prostoliniowym. Większość 
+        zadań staramy się rozwiązać w tym właśnie układzie. 
+
+        \textbf{Nie występują pozorne siły bezwładności.}
     \end{definition}
+    \begin{definition}{Nieinercjalny układ odniesienia}
+        Jest to układ w którym obserwator porusza się ruchem przyspieszonym z \textbf{przyspieszeniem
+        unoszenia $\vec{a_0}$}. Aby korzystać w nim z 
+        drugiej zasady dynamiki wprowadzamy \textbf{pozorną siłę bezwładności $\vec{F_b}$} wyrażającą się wzorem:
+        \[\vec{F_b} = -m\vec{a_0}\]
+    \end{definition}    
+    Aby wyprowadzić zasady działające w nieinercjalnym układzie odniesienia rozważmy ruch ciała
+    o masie $m$ wzdłóż osi $OX$ układu współrzędnych względem dwóch obserwatorów.
+
+    \begin{center}
+        \includegraphics[width=0.9\textwidth]{img/nuo.png}
+    \end{center}
+
+    Pierwszy obserwatory (w układzie $x(y)$) jest obserwatorem inercjalnym i pozostaje w spoczynku. 
+    Drugi obserwator (układ $x'(y')$) poruszający się względem pierwszego wzdłuż osi $OX$.
+    Niech:
+    \begin{itemize}
+        \item [--] $x(t)$ - położenie ciała względem \textbf{pierwszego} obserwatora w chwili $t$
+        \item [--] $x'(t)$ - położenie ciała względem \textbf{drugiego} obserwatora w chwili $t$
+        \item [--] $x_0(t)$ - położenie \textbf{drugiego} obserwatora względem \textbf{pierwszego} w chwili $t$
+    \end{itemize}
+    Możemy zapisać równanie:
+    \[x(t) = x'(t) + x_0(t)\]
+    \[x'(t) = x(t) - x_0(t)\]
+    Liczymy drugą pochodną aby uzyskać równanie wiążące przyspieszenie:
+    \[\frac{d^2}{dt^2}x'(t) = \frac{d^2}{dt^2}x(t) - \frac{d^2}{dt^2}x_0(t)\]
+    \[a' = a - a_0\]
+    gdzie:
+    \begin{itemize}
+        \item [--] $a$ - przyspieszenie ciała względem \textbf{pierwszego} obserwatora
+        \item [--] $a'$ - przyspieszenie ciała względem \textbf{drugiego} obserwatora
+        \item [--] $a_0$ - przyspieszenie \textbf{drugiego} obserwatora względem \textbf{pierwszego}
+    \end{itemize}
+    Możemy zauważyć, że gdy $a_0 = 0$ - operator drugi porusza się ruchem jednostajnym względem pierwszego, 
+    to $a' = a$ czyl przyspieszenia ciała względem obu układów są takie same, a więc dla $a_0 = 0$ \textbf{obserwator
+    drugi jest obserwatorem inercjalnym!}
+    Natomiast dla sytuacji gdy $a_0 \neq 0$ obserwator drugi jest \textbf{obserwatorem nieinercjalnym}. Teraz możemy
+    wyprowadzić wzór na \textbf{\em{na pozorną siłę bezwładności}}, a przyspieszenie $a_0$ nazywamy \textbf{\em{przyspieszeniem unoszenia}}. 
+    Mnożąc obsutronnie przez $m$:
+
+    \[ma' = ma - ma_0\]
+    \[ma' = F - ma_0\]
+    
+    Możemy zauważyć, że w \textbf{nieinercjalnym układzie odniesienia nie działają zasady dynamiki Newtona} bo gdy:
+    \begin{itemize}
+        \item[--] $F = 0$ - ciało nie pozostaje w spoczynku ani nie porusza się ruchem jednostajnym, 
+        tylko z przyspieszeniem o wartości $-a_0$
+        \item[--] $F \neq 0$ - siła nie jest równa iloczynowi masy i przyspieszenia
+    \end{itemize}
+    Jeśli chcemy skorzystać z drugiej zasady dynamiki w układzie nieinercjalnym to musimy wprowadzić sztuczną/pozorną 
+    siłę bezwładności.
+    \begin{definition}{Siła bezwładności}
+        \textbf{Pozorna} siła występująca w układach \textbf{nieinercjalnych}. Wyraża się wzorem:
+        \[\vec{F_b} = -m\vec{a_0}\]
+        gdzie:
+        \begin{itemize}
+            \item[--] $a_0$ - wektor przyspieszenie unoszenia (przyspieszenie z jakim porusza się obserwator)
+            \item[--] $m$ - masa ciała
+        \end{itemize}
+    \end{definition}
+    \subsubsection*{\Large Przykład w ruchu po okręgu}
+    Rozważmy sytuację gdy siedzimy w aucie pokonującym zakręt. Poruszamy się z przyspieszeniem dośrodkowym:
+    \[a_d = a_n = \frac{v^2}{R}\]
+    Skoro rozważamy układ w którym obserwujemy ruch w środku samochodu poruszającego się z przyspieszeniem
+    to rozważamy układ nieinercjalny. Naszym przyspieszeniem unoszenia będzie przyspieszenie dośrodkowe:
+    \[a_0 = a_d = \frac{v^2}{R}\]
+    Z tego wniosek, że działa na nas pozorna siła bezwładności:
+    \[\vec{F_b} = -m\vec{a_0}\]
+    \[F_b = -ma_0 = -m\frac{v^2}{R} = F_{\text{odśr}}\] 
+    Z tego wniosek, że siła bezwładności jest siłą "wyrzucającą" nas z zakrętu, przeciwną do przyspieszenia
+    dośrodkowego. Nazwyamy ją \textbf{\em{siłą odśrodkową}}.
+
+
+
 
 \end{document}
